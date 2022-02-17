@@ -2,10 +2,10 @@
  # @Author: 刘林
  # @Date: 2022-02-17 11:05:17
  # @LastEditors: 刘林
- # @LastEditTime: 2022-02-17 11:07:34
+ # @LastEditTime: 2022-02-17 11:18:16
 ### 
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
 yarn lint 
-yarn test
+yarn format

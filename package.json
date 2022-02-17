@@ -1,0 +1,28 @@
+{
+  "name": "test-precommit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:naixin-coder/test-precommit.git",
+  "author": "naixin-coder <liulin_suyan@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.4",
+    "prettier": "^2.5.1"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint --fix .",
+    "format": "prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --write . && git add -A ."
+    }
+  }
+}
